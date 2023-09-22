@@ -6,16 +6,15 @@ import { SunIcon, MoonIcon } from "@heroicons/react/24/solid"
 
 function DarkModeButton() {
 
-    //const [mounted, setMounted] = useState(false)
-    const mounted = useIsMounted();
+    const [mounted, setMounted] = useState(false)
     const { systemTheme, theme, setTheme } = useTheme()
   
+    useEffect(() => {
+      setMounted(true)
+    },[])
     
-    // useEffect(() => {
-    //   setMounted(true)
-    // }, [])
     
-    if (!mounted()) {
+    if (!mounted) {
       return null
     }
     const currentTheme = theme === "system" ? systemTheme : theme;
