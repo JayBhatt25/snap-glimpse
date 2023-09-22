@@ -8,6 +8,7 @@ type NewsArticleData = {
     language: string;
     country: string;
     published_at:string;
+    source: string;
 }
 
 type Pagination = {
