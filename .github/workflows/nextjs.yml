@@ -78,7 +78,7 @@ jobs:
           MEDIASTACK_API_KEY: ${{ secrets.MEDIASTACK_API_KEY }}
           STEPZEN_API_KEY: ${{ secrets.STEPZEN_API_KEY }}
         run: |
-          echo "API key: " >> $MEDIASTACK_API_KEY
+          echo "API key: $MEDIASTACK_API_KEY"
           ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
