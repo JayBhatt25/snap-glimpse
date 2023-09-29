@@ -6,11 +6,11 @@ type Props = {
 }
 
 function ArticlePage({searchParams}:Props) {
-  if(
-    (searchParams && Object.entries(searchParams).length === 0) || !searchParams
-  ) {
-    return notFound();
-  }
+//   if(
+//     (searchParams && Object.entries(searchParams).length === 0) || !searchParams
+//   ) {
+//     return notFound();
+//   }
 
   const article: NewsArticleData = searchParams;
   return <article>
